@@ -9,7 +9,7 @@
             <div class="row">
                 <div class="col-4">
                     <div class="card d-flex" style="width: 18rem;">
-                        <img src="..." class="card-img-top" alt="...">
+                        <img src="{{ $movie->poster }}" class="card-img-top" alt="Poster of:{{ $movie->title }}">
                         <div class="card-body">
                             <h2>{{ $movie->title }}</h2>
                             <h4>Original Title:{{ $movie->original_title }}</h4>
