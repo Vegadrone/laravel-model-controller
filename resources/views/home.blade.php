@@ -1,15 +1,24 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Films</title>
-</head>
-<body>
+@extends('layouts.main')
+
+@section('title', 'Home')
+
+@section('main-content')
+
     @forelse ($movies as $movie)
-    <span>{{ $movie->title }}</span>
+        <div class="container ">
+            <div class="row d-flex">
+                <div class="col-4">
+                    <h2>{{ $movie->title }}</h2>
+                    <h4>Original Title:{{ $movie->original_title }}</h4>
+                    <h5>Nationality:{{ $movie->nationality }}</h5>
+                    <h6>Release date:{{ $movie->date }}</h6>
+                    <h6> Vote:{{ $movie->vote }}</h6>
+                </div>
+            </div>
+        </div>
+
+
     @empty
     @endforelse
-</body>
-</html>
+
+@endsection
