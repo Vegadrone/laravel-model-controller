@@ -10855,3 +10855,6 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
+body {
+  background-color: rgb(112, 105, 133);
+}

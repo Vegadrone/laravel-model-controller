@@ -3,12 +3,11 @@
 @section('title', 'Home')
 
 @section('main-content')
-
-    @forelse ($movies as $movie)
-        <div class="container">
-            <div class="row">
-                <div class="col-4">
-                    <div class="card d-flex" style="width: 18rem;">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 d-flex flex-wrap">
+                @forelse ($movies as $movie)
+                    <div class="card m-5" style="width: 18rem;">
                         <img src="{{ $movie->poster }}" class="card-img-top" alt="Poster of:{{ $movie->title }}">
                         <div class="card-body">
                             <h2>{{ $movie->title }}</h2>
@@ -18,10 +17,10 @@
                             <h6> Vote:{{ $movie->vote }}</h6>
                         </div>
                     </div>
-                </div>
+                @empty
+                @endforelse
             </div>
         </div>
-    @empty
-    @endforelse
+    </div>
 
 @endsection
