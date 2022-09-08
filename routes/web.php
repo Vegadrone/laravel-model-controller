@@ -18,4 +18,4 @@ Route::get('/', function () {
     return view('home');
 });
 
-Route::get('/Controllers', 'MovieController@index');
+Route::get('/', 'MovieController@index');
